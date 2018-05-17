@@ -481,7 +481,6 @@
 }
 .all-attent,.all-fans,.all-comment{
 	font-size: 18px;
-	cursor: pointer;
 }
 .batch{
 	float: right;
@@ -489,32 +488,32 @@
 	line-height: 22px;
 	cursor: pointer;
 }
-.empty-attent img,.empty-fans img{
+.empty-attent img,.empty-fans img,.empty-comment img{
 	margin-top: 50px;
 	width: 370px;
     height: 320px;
 }
-.empty-attent,.empty-fans{
+.empty-attent,.empty-fans,.empty-comment{
 	display: none;
 	font-size: 14px;
     color: #6d757a;
     text-align: center;
 }
-.content ul{
+.attent-content ul,.fans-content ul{
 	padding: 0 20px 20px 20px;
 }
-.content li{
+.attent-content li,.fans-content li{
 	position: relative;
 	display: block;
 	padding: 20px 0;
 	border-bottom: 1px solid #e5e9ef;
 }
-.content li:after{
+.attent-content li:after,.fans-content li:after{
 	display: block;
 	content: "";
 	clear: both;
 }
-.content li img,.content li>a{
+.attent-content li img,.attent-content li>a,.fans-content li img,.fans-content li>a{
 	display: inline-block;
 	float: left;
 	width: 60px;
@@ -554,4 +553,41 @@
     border-radius: 4px;
     color: #6d757a;
     cursor: pointer;
+}
+.fans-action:hover,.attent-action:hover{
+	color: #00a1d6;
+}
+.comment-info{
+	margin: 0 16px;
+	padding: 24px 0;
+	border-bottom: 1px solid #e5e9ef;
+}
+.comment-info-icon img,.comment-info-icon{
+	display: inline-block;
+	margin-right: 16px;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+}
+.comment-info-box{
+	display: inline-block;
+	vertical-align: top;
+}
+.comment-info-name a{
+	font-size: 14px;
+    color: #333;
+    font-weight: 700;
+}
+.comment-info-data{
+	margin: 0 10px;
+	color: #999;
+}
+.comment-text{
+	margin: 10px 0;
+	
+}
+.comment-text a{
+	font-size: 12px;
+	line-height: 14px;
+	color:  #00a1d6;
 }
