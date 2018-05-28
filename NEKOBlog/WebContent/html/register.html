@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>注册</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/register.css">
+</head>
+<body>
+	<div class="wapper">
+
+		<div class="header">
+			<img src="../image/logo.jpg" class="logo">
+			<div class="nav">
+				<ul>
+					<li>主页</li>
+					<li>生活</li>
+					<li>学习</li>
+					<li>娱乐</li>
+				</ul>
+			</div>
+			<div class="search"><img src="../image/search.jpg"><input type="search" name="search" placeholder="search in neko" > </div>
+			<img src="../image/touxiang.jpg" class="icon">
+			<div class="no-load">
+				<p>你还没有登录哦~</p>
+			</div>
+		</div>
+
+		<div class="main">
+			<div>
+				<h1>注册新账户</h1>
+				
+				<div class="info">
+					
+					<form action="/userregister" method="post" id=register>
+						
+						<div class="i-info-name">
+							<label>昵称：</label><input type="text" name="username" class="name">
+							<span></span>
+						</div>
+						<div class="i-info-password">
+							<label>密码：</label><input type="password" name="password" class="password"><span></span>
+						</div>
+						<div class="i-info-repassword">
+							<label>确认密码：</label><input type="password" name="repassword" class="repassword"><span></span>
+						</div>
+						<div class="i-info-signature">
+							<label>个签：</label> <textarea name="signature" rows="3" class="signature" placeholder="你的个签"></textarea>
+						</div>
+
+						<div class="i-info-sex">
+							<label>性别：</label>
+							<div>
+								<label class="sex">
+									<input type="radio" name="sex" value="man">
+									<span class="sex-man">男</span>
+								</label>
+								<label class="sex">
+									<input type="radio" name="sex" value="women">
+									<span  class="sex-women">女</span>
+								</label>
+								<span></span>
+
+							</div>
+							
+						</div>
+						
+
+						<div class="i-info-email">
+							<label>邮箱：</label><input type="email" name="email" class="email"><span></span>
+						</div>
+					
+					<!-- <div id="button"> -->
+						<input type="submit" value="提交" class="submit">
+						<input type="reset" value="重置" class="reset">
+					<!-- </div> -->
+					
+					</form>
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+		<div class="footer">
+			&copy;vensin出品
+		</div>
+	
+</div>
+	<script type="text/javascript" src="../js/register.js"></script>
+</body>
+</html>

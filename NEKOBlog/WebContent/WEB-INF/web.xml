@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+<!-- com.checkUsernamePost -->
+	<!--  <servlet>  
+        <servlet-name>checkUsername</servlet-name>  
+        <servlet-class>NEKOBlog.dao.CheckUsername</servlet-class>  
+    </servlet>  
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>NEKOBlog.servlet.UserServlet</servlet-class>
+    </servlet> -->
+     <servlet>  
+        <servlet-name>userRegisterServlet</servlet-name>  
+        <servlet-class>NEKOBlog.dao.userRegisterServlet</servlet-class>  
+    </servlet>
+   <!--  <servlet-mapping>  
+        <servlet-name>user/usermodify</servlet-name>  
+        <url-pattern>/user/usermodify</url-pattern>  
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping> -->
+      <servlet-mapping>  
+        <servlet-name>userRegisterServlet</servlet-name>  
+        <url-pattern>/userregister</url-pattern>  
+    </servlet-mapping>
+    
+<!--  <filter>  
+        <filter-name>testFilter</filter-name>  
+        <filter-class>dao.testFilter</filter-class>  
+    </filter> 
+    <filter-mapping>将过滤器映射到servlet或者URL中，即把过滤器和web资源关联起来  
+        <filter-name>testFilter</filter-name><! 上面声明过的过滤器名 -->  
+       <!--  <servlet-name> /*</servlet-name>指定过滤器映射的URL，/*是指全部URL  
+    </filter-mapping>  
+     --> 
+  <display-name>NEKOBlog</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
