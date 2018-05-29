@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>写博客</title>
+	<link rel="stylesheet" type="text/css" href="../css/write.css">
+</head>
+<body>
+	<div class="wapper">
+		<div class="header">
+			<img src="../image/logo.jpg" class="logo">
+			<div class="nav">
+				<ul>
+					<li>主页</li>
+					<li>生活</li>
+					<li>学习</li>
+					<li>娱乐</li>
+				</ul>
+			</div>
+			<div class="search"><img src="../image/search.jpg"><input type="search" name="search" placeholder="search in neko" > </div>
+			<img src="../image/touxiang.jpg" class="icon">
+			<div class="author_info">
+				<div>
+					<span id="username">Vensin</span>
+					<span class="signature">超超超可爱哈哈哈哈</span>
+					<span class="fans">粉丝 <span class="fans-count">10w</span></span> 
+					<span class="attent">关注 <span class="atten-count">10</span></span>
+				</div>
+				<div class="opera">
+					<a href=""><img src="../image/i.png"><span class="i">个人中心</span></a>
+					<a href=""><img src="../image/write.png"><span>写博客</span></a>
+					<a href=""><img src="../image/info.png"><span>我的留言</span></a>
+				</div>
+				<span class="exit">退出</span>
+			</div>
+		</div>
+
+		<div class="main">
+			<div class="essay">
+				<form>
+					<div class="title">
+					<label class="essay-title"><span>标题：</span><input type="text" name="essay-title"></label>
+					
+					</div>
+
+					<div class="body">
+						<textarea class="essay-body"></textarea>
+					</div>
+
+					<div class="tag">
+						<span class="tag-span">标签：</span>
+						<ul>
+							
+						</ul>
+						<div class="add-tag">
+							<input type="text" name="tag" class="add">
+							<span class="button-add">+</span>
+						</div>
+						
+					</div>
+
+					<div class="button">
+						<input type="button" name="commit" value="发布" class="essay-commit">
+					</div>
+
+				</form>
+				
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+		<div class="footer">
+			&copy;vensin出品
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/write.js"></script>
+</body>
+</html>
