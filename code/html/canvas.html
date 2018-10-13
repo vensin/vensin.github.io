@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页绘图工具</title>
+	<link rel="stylesheet" type="text/css" href="../css/canvas.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="wapper">
+		<div class="header">
+			Canvas网页绘图
+		</div>
+
+		<div class="body">
+			<div id="tool">
+				<ul>
+					<li>
+						<img src="../image/画笔.jpg" alt="画笔" onclick="drawPen()">
+						<div></div>
+					</li>
+					<li>
+						<img src="../image/橡皮.jpg" alt="橡皮" onclick="eraser()">
+					</li>
+					<li>
+						<img src="../image/线条.jpg" alt="线条" onclick="shape()">
+					</li>
+					<li>
+						<img src="../image/text.jpg" alt="文字" onclick="drawText()">
+					</li>
+					<li>
+						<img src="../image/保存.jpg" alt="保存" onclick="save()">
+					</li>
+					<li>
+						<img src="../image/垃圾桶.jpg" alt="删除" onclick="deleteCanvas()">
+					</li>
+				</ul>
+			</div>
+			
+			<div id="background">
+				<button class="newCanvas" onclick="newCanvas(this)">新建</button>
+				<div></div>
+			</div>
+
+		</div>
+		
+		<div class="window">
+
+			<div id="newCanvas">
+				<p>新建画布</p>
+
+				<div>
+				<label for="height">高:<input type="text" name="height" id="height">px&nbsp;最大值为600</label>
+				</div>
+			
+
+				<div>
+					<label for="width">宽:<input type="text" name="width" id="width">px&nbsp;</label>
+					最大值为1100<span></span>
+				</div>
+			</div>	
+				
+			<div id="newPen">
+				<p>新建画笔</p>
+				<div>
+					<label for="text">画笔大小：<input type="text" name="" id="penSize">px</label>
+				</div>
+			</div>		
+
+			<div id="newText">
+				<p>新建文字</p>
+
+				<div>
+					<label for="text">新增文字：<input type="text" name="" id="text"></label>
+				</div>
+
+				<div>
+					<label for="fontSize">字体大小：<input type="text" name="" id="fontSize">px</label>
+				</div>
+				<div>
+					是否填充：
+					<label for="yes">Yes</label><input type="radio" value="Yes" name="isFull" id="yes">
+					<label for="no">No<input type="radio" value="No" name="isFull" id="no"></label>
+				</div>
+			</div>
+
+			<div id="newEraser">
+				<p>新建橡皮</p>
+				<div>
+					<label for="eraserSize">橡皮大小：
+						<input type="text" name="" id="eraserSize">px
+					</label>
+				</div>
+			</div>
+
+			<div id="newShape">
+				<p>新建图形</p>
+
+				<div>
+					<label><input type="radio" name="shape" value="straight" 
+					checked="checked">直线</label>
+					<label><input type="radio" name="shape" value="circle">圆</label>
+					<label><input type="radio" name="shape" value="rectangle">矩形</label>
+					
+				</div>
+
+				<div>
+					是否填充：
+					<label for="yes">Yes<input type="radio" value="Yes" name="isFull" id="yes"></label>
+					<label for="no">No<input type="radio" value="No" name="isFull" id="no"></label>
+				</div>
+				<div>
+					线条大小：
+					<label for="shapeSize">
+						<input type="text" name="" id="shapeSize" value="1">px
+					</label>
+				</div>
+			</div>
+
+			<div id="bgColor">
+					<div class="palette"></div>
+					<div>
+						<ul>
+							<li>
+								<div class="red bar"><span class="btn"></span></div>
+								Red:<span class="redPerc percent">0%</span></li>
+
+							<li>
+								<div class="green bar"><span class="btn"></span></div>
+								Green:<span class="greenPerc percent">0%</span></li>
+
+							<li><div class="blue bar"><span class="btn"></span></div>
+								Blue:<span class="bluePerc percent">0%</span></li>
+						</ul>
+						
+					</div>
+			</div>
+			<button>确定</button>
+			<button>取消</button>
+			
+		</div>	
+	</div>
+
+
+<script type="text/javascript" src="../js/draw.js"></script>
+<script type="text/javascript" src="../js/canvas.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+
+</body>
+</html>
