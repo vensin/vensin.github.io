@@ -1,41 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vensin|禾几</title>
-	<link rel="stylesheet" type="text/css" href="./index/index.css">
-	<link rel="stylesheet" href="./index/font-awesome/css/font-awesome.min.css">
-  	<link href="./index/vensin.ico" type="image/x-icon" rel="shortcut icon" />
+	<title></title>
+	<meta charset="utf-8">
+	<mate name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="./css/css.css">
 </head>
 <body>
-	<div class="wapper">
-		<div class="bg"></div>
-		<div class="main">
-			<div class="icon">
-				<img src="./index/vensin.jpg">
+	<div class="container">
+		<div class="header"></div>
+		<div class="body">
+			<div>
+				<div class="video" style="height: 100vh;max-height: 657px;" id="video">
+					<div class="videoInfo">
+						<p>国王与乞丐</p>
+						<p>--华晨宇，杨宗纬</p>
+					</div>
+					
+					<video src="./other/mv.mp4" controls style="width: 100%;height: 450px"></video>
+				</div>
+				<div class="audioWrapper" style="height: 100vh;max-height: 657px;" id="audio">
+					<div class="main">
+						<div class="musicName">国王与乞丐</div>
+						<div class="poster">
+							<img src="./images/gwyqg.png">
+							<div class="anima"></div>
+						</div>
+						
+						<div class="audio">
+							<audio src="./other/国王与乞丐.mp3" controls onplaying="roll()"
+						 	onpause='stop()'></audio>
+						</div>
+					</div>
+					<div class="lyric">
+						<p>国王与乞丐 - 杨宗纬,华晨宇 </p>
+						<p>词：代岳东</p>
+						<p>曲：Mike Chan,Faizal Tahir</p>
+						<p>怎么了 怎么了</p>
+						<p>一份爱失去了光泽</p>
+						<p>面对面 背对背</p>
+						<p>反复挣扎怎么都痛</p>
+						<p>以为爱坚固像石头</p>
+						<p>谁知一秒钟就碎落</p>
+						<p>难道心痛都要不断打磨</p>
+						<p>抱紧你的我比国王富有</p>
+						<p>曾多么快乐</p>
+						<p>失去你的我比乞丐落魄</p>
+						<p>痛多么深刻</p>
+						<p>噢 喔 噢 喔</p>
+						<p>噢 喔 噢 喔</p>
+						<p>谁哭着谁笑着</p>
+						<p>一人分饰两个角色</p>
+						<p>越执迷越折磨</p>
+						<p>回忆还在煽风点火</p>
+						<p>明知往前就会坠落</p>
+						<p>抱着遗憾重返寂寞</p>
+						<p>爱到最后究竟还剩什么</p>
+						<p>抱紧你的我比国王富有</p>
+						<p>曾多么快乐</p>
+						<p>失去你的我比乞丐落魄</p>
+						<p>痛多么深刻</p>
+						<p>当一切 结束了 安静了 过去了</p>
+						<p>为什么 还拥有 一万个 舍不得</p>
+						<p>喔 喔</p>
+						<p>谁又能感受</p>
+						<p>回忆里的我比国王富有</p>
+						<p>奢侈的快乐</p>
+						<p>失去你以后比乞丐落魄</p>
+						<p>心痛如刀割</p>
+						<p>怀念那时你安静陪着我</p>
+						<p>柔软时光里最美的挥霍</p>
+						<p>喔 喔</p>
+						<p>爱有多快乐</p>
+						<p>痛有多深刻</p>
+						<p>痛有多深刻</p>
+					</div>
+				</div>
+
 			</div>
-			<p class="name">Vensin</p>
-			<p class="">这世间所有的相遇，都是久别重逢。</p>
-			<nav class="link">
-				<ul>
-					<li class="link1">
-						<a href="https://vensin.github.io/myblog/">
-						<i class="fa fa-pencil-square-o fa-2x"  aria-hidden="true"></i>
-						</a>
-					</li>
-					<li class="link2">
-						<a href="https://github.com/vensin/vensin.github.io">
-							<i class="fa fa-github fa-2x"></i>
-						</a>
-					</li>
-					<li class="link3">
-						<a href="">
-							<i class="fa fa-weibo fa-2x"></i>
-						</a>
-					</li>
+
+
+			<div class="box" style="height: 100vh;max-height: 657px;" id="magnifier">
+				<div class="small">
+			        <img src="./images/hua4.png" alt="" style="width: 350px;height: 350px;" />
+			        <div class="mask"></div>
+			    </div>
+			    <div class="big">
+			        <img src="./images/hua42.png" alt=""  style="width: 800px;height: 800px;"/>
+			    </div>
+			</div>
+
+
+			<div  id="lunbo">
+				<ul class="imgWrapper">
+					<li class="first-img" title="卡西莫多的礼物"><img src="./images/hua1.jpg"></li>
+					<li class="second-img" title="异类"><img src="./images/hua2.jpg"></li>
+					<li class="third-img" title="寻"><img src="./images/hua3.jpg"></li>
+					<li class="forth-img" title="蜉蝣"><img src="./images/hua5.jpg"></li>
+					<li class="fifth-img" title="烟火里的尘埃"><img src="./images/hua6.jpg"></li>
 				</ul>
-			</nav>
+				<div>
+					<img src="./images/向左.png" 
+					class="change"
+					onclick="rollLeft()" 
+					style="left: -470px;">
+					<img src="./images/向右.png" style="right: -470px;"
+					class="change"onclick="rollRight()" >
+				</div>
+			</div>
 		</div>
+		<div class="footer">
+			<div class="nav">
+				<ul>
+					<li><a href="#video">视频</a> </li>
+					<li><a href="#audio">音乐</a></li>
+					<li><a href="#magnifier">放大镜</a></li>
+					<li><a href="#lunbo">轮播图</a></li>
+				</ul>
+			</div>
+		</div>
+
 	</div>
-	<script type="text/javascript" src="./index/index.js"></script>
 </body>
+<script src="./js/lyric.js"></script>
+<script src="./js/animate.js"></script>
+<script type="text/javascript" src="./js/js.js"></script>
 </html>
