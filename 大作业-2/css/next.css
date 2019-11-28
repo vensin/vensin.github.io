@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(../images/bg2.jpg);
+	background-size: cover;
+	background-attachment:fixed;
+
+}
+.dog{
+	position: fixed;
+	top: 50%;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	margin-top: -25px;
+}
+
+.panda{
+	position: fixed;
+	width: 300px;
+	height: 300px;
+	top: 50%;
+	right: 60px;
+	margin-top: -25px;
+	display: none;
+
+}
+.dog:hover+.panda{
+
+	display: block;
+}
+
+.lastPage{
+	text-align: left;
+	margin:20px 0 0 20px;
+}
+.lastPage img{
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	transition: all 1s;
+	animation: next 1s infinite linear;
+}
+@keyframes next{
+	0%{
+		
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	100%{
+		transform: scale(1);
+	}
+}

@@ -1,131 +1,120 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta charset="utf-8">
-	<mate name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="./css/css.css">
+<title>广东工业大学新闻网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--引用jQuery Mobile函数库  应用ThemeRoller制作的样式-->
+<link rel="stylesheet" href="themes/mytheme.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+
+<!--优化屏幕宽度-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+	*{
+		text-decoration: none;
+		list-style: none;
+	}
+	body{
+		font-family:Arial, Helvetica,  sans-serif,微软正黑体;
+		background-color: white;
+		background-image: none;
+	}
+	.header,.footer{
+		background-color: #5679b3;
+		background-image: none;
+		border-color: #5679b3;
+	}
+	.footer{
+		/*height: 5vh;*/
+		/*line-height: 5vh;*/
+		font-size: 10px;
+	}
+	#content{
+		font-size:15px;
+		padding:0px;
+		margin:0px;
+	}
+	.firstcontent{
+		text-align:center;
+	}
+	img{
+		width: 8vw;
+		height: 8vw;
+		margin:0px;
+		padding:0px;
+	}
+	.box{
+		position: absolute;
+	}
+	.box a{
+		padding: 3vh 0;
+		width: 30vw;
+		font-size: 2em;
+		background-color: #5679b3;
+		background-image: none;
+		border: none;
+	}
+	.box a span{
+		border: none;
+	}
+	.box-1,.box-3{
+		
+		left: 15vw;
+	}
+	.box-1,.box-2{
+		top: 20vh;
+	}
+	.box-3,.box-4{
+		top: 40vh;
+	}
+	.box-2,.box-4{
+		right: 15vw;
+		
+
+	}
+</style>
 </head>
 <body>
-	<div class="container">
-		<div class="header"></div>
-		<div class="body">
-			<div>
-				<div class="video" style="height: 100vh;max-height: 657px;" id="video">
-					<div class="videoInfo">
-						<p>国王与乞丐</p>
-						<p>--华晨宇，杨宗纬</p>
-					</div>
-					
-					<video src="./other/mv.mp4" controls style="width: 100%;height: 450px"></video>
-				</div>
-				<div class="audioWrapper" style="height: 100vh;max-height: 657px;" id="audio">
-					<div class="main">
-						<div class="musicName">国王与乞丐</div>
-						<div class="poster">
-							<img src="./images/gwyqg.png">
-							<div class="anima"></div>
-						</div>
-						
-						<div class="audio">
-							<audio src="./other/国王与乞丐.mp3" controls onplaying="roll()"
-						 	onpause='stop()'></audio>
-						</div>
-					</div>
-					<div class="lyric">
-						<p>国王与乞丐 - 杨宗纬,华晨宇 </p>
-						<p>词：代岳东</p>
-						<p>曲：Mike Chan,Faizal Tahir</p>
-						<p>怎么了 怎么了</p>
-						<p>一份爱失去了光泽</p>
-						<p>面对面 背对背</p>
-						<p>反复挣扎怎么都痛</p>
-						<p>以为爱坚固像石头</p>
-						<p>谁知一秒钟就碎落</p>
-						<p>难道心痛都要不断打磨</p>
-						<p>抱紧你的我比国王富有</p>
-						<p>曾多么快乐</p>
-						<p>失去你的我比乞丐落魄</p>
-						<p>痛多么深刻</p>
-						<p>噢 喔 噢 喔</p>
-						<p>噢 喔 噢 喔</p>
-						<p>谁哭着谁笑着</p>
-						<p>一人分饰两个角色</p>
-						<p>越执迷越折磨</p>
-						<p>回忆还在煽风点火</p>
-						<p>明知往前就会坠落</p>
-						<p>抱着遗憾重返寂寞</p>
-						<p>爱到最后究竟还剩什么</p>
-						<p>抱紧你的我比国王富有</p>
-						<p>曾多么快乐</p>
-						<p>失去你的我比乞丐落魄</p>
-						<p>痛多么深刻</p>
-						<p>当一切 结束了 安静了 过去了</p>
-						<p>为什么 还拥有 一万个 舍不得</p>
-						<p>喔 喔</p>
-						<p>谁又能感受</p>
-						<p>回忆里的我比国王富有</p>
-						<p>奢侈的快乐</p>
-						<p>失去你以后比乞丐落魄</p>
-						<p>心痛如刀割</p>
-						<p>怀念那时你安静陪着我</p>
-						<p>柔软时光里最美的挥霍</p>
-						<p>喔 喔</p>
-						<p>爱有多快乐</p>
-						<p>痛有多深刻</p>
-						<p>痛有多深刻</p>
-					</div>
-				</div>
-
-			</div>
-
-
-			<div style="height: 100vh;max-height: 657px;" id="magnifier">
-				<div class="box">
-					<div class="small">
-				        <img src="./images/hua4.png" alt="" style="width: 350px;height: 350px;" />
-				        <div class="mask"></div>
-				    </div>
-				    <div class="big">
-				        <img src="./images/hua42.png" alt=""  style="width: 800px;height: 800px;"/>
-				    </div>
-				</div>
-				
-			</div>
-
-
-			<div  id="lunbo">
-				<ul class="imgWrapper">
-					<li class="first-img" title="卡西莫多的礼物"><img src="./images/hua1.jpg"></li>
-					<li class="second-img" title="异类"><img src="./images/hua2.jpg"></li>
-					<li class="third-img" title="寻"><img src="./images/hua3.jpg"></li>
-					<li class="forth-img" title="蜉蝣"><img src="./images/hua5.jpg"></li>
-					<li class="fifth-img" title="烟火里的尘埃"><img src="./images/hua6.jpg"></li>
-				</ul>
-				<div>
-					<img src="./images/向左.png" 
-					class="change"
-					onclick="rollLeft()" 
-					style="left: -470px;">
-					<img src="./images/向右.png" style="right: -470px;"
-					class="change"onclick="rollRight()" >
-				</div>
-			</div>
-		</div>
-		<div class="footer">
-			<div class="nav">
-				<ul>
-					<li><a href="#video">视频</a> </li>
-					<li><a href="#audio">音乐</a></li>
-					<li><a href="#magnifier">放大镜</a></li>
-					<li><a href="#lunbo">轮播图</a></li>
-				</ul>
-			</div>
-		</div>
-
+<div data-role="page" data-title="Happy" id="first" data-theme="a">
+	<div data-role="header" class="header">
+		<h1>广工新闻</h1>
 	</div>
+	<div data-role="content" id="content" class="firstcontent">
+		<div class="box box-1">
+			<a href="./菜单选择.htm"  data-ajax="false" data-role="button" data-mini="true" data-inline="true">
+				<img src="./images/甜点.png"><br>
+				甜点
+			</a>
+		</div>
+		<div class="box box-2">
+			<a href="https://v.qq.com"  data-ajax="false" data-role="button" data-mini="true" data-inline="true">
+				<img src="./images/腾讯视频.png"><br>
+				腾讯视频
+			</a>
+		</div>
+		<div class="box box-3">
+			<a href="http://jsjxy.gdut.edu.cn/"  data-ajax="false" data-role="button" data-mini="true" data-inline="true">
+				<img src="./images/计算机.png"><br>
+				计算机学院
+			</a>
+		</div>
+		<div class="box box-4">
+			<a href="https://www.taobao.com"  data-ajax="false" data-role="button" data-mini="true" data-inline="true">
+				<img src="./images/淘宝.png"><br>
+				淘宝网
+			</a>
+		</div>
+		<div style="position: fixed;right: 0;bottom: 5vh;font-size: 0.5em;">
+			<a href="./大作业-2/html/index.html">作业2</a>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" class="footer" style="text-align:center;">
+	  电话：18467366575 
+	  地址：广东省广州市番禺区</br>
+	  网址：www.gdut.com
+	</div>
+</div>
 </body>
-<script src="./js/lyric.js"></script>
-<script src="./js/animate.js"></script>
-<script type="text/javascript" src="./js/js.js"></script>
 </html>
